@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual pais </title>
+
+    <style>
+        body{
+            background-color: rgb(10, 100, 100);
+            font: normal 1.2em arial ;
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .text{
+            text-align: center;
+        }
+
+        p{
+            color: rgb(1, 1, 56);
+            text-align: justify;
+            height: 70px;
+            width: 450px;
+            padding: 10px;
+        }
+        
+
+        label{
+            color: cornflowerblue;
+            padding-left: 10px;
+        }
+
+        .txtpais{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>DE QUAL PAÌS E SUA ORIGEM?</h1>
+            <div class="text">
+                <p>Digite em maiúsculas e usando abreviações de 3 letras, exempo (BRA, FRA, EUA, ALE, ARG, ETC. caso seu pais tiver letras parecidas, use 4 letras, exemplo Argentina(ARG), Argélia(ARGE) )</p>
+            </div>
+        <form method="post">
+            <label for="ipais">De qual país você veio?</label>
+            <input type="text" name="pais" id="ipais" maxlength="4" minlength="3" required autocomplete="country-name">
+            <input type="button" value="Enviar" onclick="verificar()">
+            <span><p>Você e: <span class="txtpais">--</span></p></span>
+        </form>
+    </main>
+    
+    <script>
+        function verificar(){
+            var país = window.document.querySelector('#ipais')
+            var txtpaís = (país.value)
+            
+            var res = window.document.querySelector('.txtpais')
+
+            res.innerHTML = `<strong>${txtpaís}</strong>, `
+
+            if (txtpaís == 'BRA' ){
+                res.innerHTML += 'Tu e Brasileiro, bem vindo mlk'
+
+            }else{
+                res.innerHTML += 'Tu e Gringo ne safado'
+            }
+
+           
+
+                
+
+        }
+
+    </script>
+</body>
+</html>
