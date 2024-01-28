@@ -25,8 +25,12 @@ main{
 
 }
 
+img{
+    border-radius: 1000px;
+}
+
 footer{
-    
+
     color: white;
     text-align: center;
     font-style: italic;
