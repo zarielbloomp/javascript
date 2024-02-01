@@ -15,7 +15,7 @@ function enviar() {
         if (fsex[0].checked){
            genero = 'Homem'
            if(idade >=0 && idade <12){
-            //criança
+            //criançad
             img.setAttribute('src','img/bebe-H.jpg')
            }else if( idade >=12 && idade < 21 ){
             //jovem
